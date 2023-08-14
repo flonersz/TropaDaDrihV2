@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TropaDaDrih</h1>
+        <div class="member">
+            <img src="member.png" alt="member" width="50px">
+            <h1 id="membro"></h1>
+            <script>
+                const html = document.getElementById("membro")
+                fetch("https://discord.com/api/v9/invites/tropadadrih?with_counts=true")
+                .then(response => response.json())
+                .then(data => {
+                     html.innerHTML = data.approximate_member_count; /*html.innerHTML = String(data.approximate_member_count).substr(0,1) + "K"*/
+                    }
+                )
+            </script>
+            </div>
+    </header>
+    <main>
+        <div class="left">
+            <div class="text">
+                <h1>Tropa da Drih is DAO Comunity<br>
+                    It's a profit-oriented community.</h1>
+                <p>Come be part of our community, and profit together with usclick the button below to join our discord!</p>
+                <div class="buttons">
+                  <img class="discord-button" src="discord-button.png" alt="discord-button">
+                  <img class="twitter-button" src="twitter-button.png" alt="twitter-button">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="container">
+                <input type="radio" name="slider" id="item-1" checked>
+                <input type="radio" name="slider" id="item-2">
+                <input type="radio" name="slider" id="item-3">
+              <div class="cards">
+                <label class="card" for="item-1" id="song-1">
+                  <img class="imagem1" src="lucro1.png" alt="lucro">
+                </label>
+                <label class="card" for="item-2" id="song-2">
+                  <img class="imagem1" src="lucro2.png" alt="lucro">
+                </label>
+                <label class="card" for="item-3" id="song-3">
+                  <img  class="imagem1" src="lucro3.png" alt="lucro">
+                </label>
+              </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

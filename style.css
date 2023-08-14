@@ -1,0 +1,537 @@
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    background-image: linear-gradient(65deg, #fad6ff 0, #dcbbff 25%, #b99df2 50%, #9581de 75%, #7269cc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header > h1 {
+    font-size: 30px;
+    padding-left: 40px;
+}
+
+header > .member {
+    padding-right: 40px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+main > .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main > .left > .text {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main > .left > .text > p {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+main > .left > .text > h1 {
+    font-size: 40px;
+}
+
+main > .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+input[type=radio] {
+    display: none;
+}
+
+.card {
+    position: absolute;
+    width: 68%;
+    height: 88%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+  }
+  
+  .card > img {
+      width: 35%px;
+      height: 40%px;
+      border-radius: 20px;  
+      /* box-shadow: 2px 2px 0px 7px rgb(204, 204, 204); */
+
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+  
+  .imagem1 {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+  }
+
+  .buttons {
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .buttons > img {
+    width: 13vw;
+  }
+
+  .buttons > .twitter-button {
+    padding-left: 40px;
+  }
+  
+  #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .8;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .8;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  } 
+  
+  #item-2:checked ~ .player #test {
+    transform: translateY(0);
+  }
+  
+  #item-2:checked ~ .player #test  {
+    transform: translateY(-40px);
+  }
+  
+  #item-3:checked ~ .player #test  {
+    transform: translateY(-80px);
+  }
+  
+  .animated-background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: animateBackground 10s infinite;
+    background: linear-gradient(45deg, #08679e, #0066ff);
+    background-size: 400% 400%;
+  }
+  
+  @keyframes animateBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+@media(max-width: 1800px) {
+  .container {
+    width: 100%;
+    max-width: 700px;
+    max-height: 500px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 1560px) {
+  .container {
+    width: 100%;
+    max-width: 650px;
+    max-height: 450px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 1360px) {
+  .container {
+    width: 100%;
+    max-width: 550px;
+    max-height: 400px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 1240px) {
+  .container {
+    width: 100%;
+    max-width: 500px;
+    max-height: 350px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+main > .left > .text > h1 {
+    font-size: 35px;
+}
+}
+
+@media(max-width: 1120px) {
+  .container {
+    width: 100%;
+    max-width: 450px;
+    max-height: 320px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 30px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 1120px) {
+  .container {
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 25px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 848px) {
+  .container {
+    width: 100%;
+    max-width: 350px;
+    max-height: 270px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 25px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 740px) {
+  .container {
+    width: 100%;
+    max-width: 300px;
+    max-height: 250px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 20px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 634px) {
+  .container {
+    width: 100%;
+    max-width: 250px;
+    max-height: 200px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 18px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 550px) {
+  
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  main > .left {
+    height: 50vh;
+  }
+
+  main > .right {
+    height: 50vh;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 250px;
+    max-height: 200px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main > .left > .text {
+    width: 70vw;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 25px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 15px;
+  }
+
+}
+
+@media(max-width: 500px) {
+
+  .container {
+    width: 100%;
+    max-width: 230px;
+    max-height: 170px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .buttons > .discord-button {
+    width: 25vw;
+  }
+
+  .buttons > .twitter-button {
+    width: 25vw;
+  }
+}
+
+@media(max-width: 402px) {
+
+  .container {
+    width: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .buttons > .discord-button {
+    width: 20vw;
+  }
+
+  .buttons > .twitter-button {
+    width: 20vw;
+  }
+
+  main > .left > .text > h1 {
+    font-size: 20px;
+  }
+  main > .left > .text > p {
+    font-family: monospace;
+    font-size: 11px;
+  }
+
+  header > h1{
+    font-size: 15px;
+  }
+
+  header{
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 380px) {
+  .container {
+    width: 100%;
+    max-width: 180px;
+    max-height: 130px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .buttons > .discord-button {
+    width: 30vw;
+  }
+
+  .buttons > .twitter-button {
+    width: 30vw;
+  }
+
+  header > h1{
+    font-size: 13px;
+  }
+
+  header{
+    font-size: 8px;
+  }
+}
