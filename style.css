@@ -133,13 +133,14 @@ input[type=radio] {
   .buttons {
     display: flex;
     padding-top: 20px;
+    cursor: pointer;
   }
 
-  .buttons > img {
+  .buttons > a > img {
     width: 13vw;
   }
 
-  .buttons > .twitter-button {
+  .twitter-button {
     padding-left: 40px;
   }
   
@@ -456,11 +457,11 @@ main > .left > .text > h1 {
     flex-wrap: wrap;
   }
 
-  .buttons > .discord-button {
+  .buttons > a > .discord-button {
     width: 25vw;
   }
 
-  .buttons > .twitter-button {
+  .buttons > a > .twitter-button {
     width: 25vw;
   }
 }
@@ -480,11 +481,11 @@ main > .left > .text > h1 {
     flex-wrap: wrap;
   }
 
-  .buttons > .discord-button {
+  .buttons > a > .discord-button {
     width: 20vw;
   }
 
-  .buttons > .twitter-button {
+  .buttons > a > .twitter-button {
     width: 20vw;
   }
 
@@ -523,11 +524,11 @@ main > .left > .text > h1 {
     width: 70vw;
   }
 
-  .buttons > .discord-button {
+  .buttons > a > .discord-button {
     width: 30vw;
   }
 
-  .buttons > .twitter-button {
+  .buttons > a > .twitter-button {
     width: 30vw;
   }
 
