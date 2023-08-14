@@ -508,8 +508,8 @@ main > .left > .text > h1 {
 @media(max-width: 380px) {
   .container {
     width: 100%;
-    max-width: 180px;
-    max-height: 130px;
+    max-width: 250px;
+    max-height: 170px;
     height: 100%;
     transform-style: preserve-3d;
     display: flex;
@@ -517,6 +517,10 @@ main > .left > .text > h1 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  main > .right {
+    width: 70vw;
   }
 
   .buttons > .discord-button {
